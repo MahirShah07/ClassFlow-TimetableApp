@@ -1,0 +1,19 @@
+.segmented-wrapper .ant-segmented {
+  background-color: var(--card-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--border-color);
+  padding: 4px;
+  border-radius: 12px;
+}
+
+.segmented-wrapper .ant-segmented-item {
+  color: var(--text-secondary);
+}
+
+.segmented-wrapper .ant-segmented-item-selected {
+  background-color: var(--primary-color) !important;
+  color: white !important;
+  box-shadow: 0 2px 8px rgba(22, 119, 255, 0.4);
+  border-radius: 8px;
+}

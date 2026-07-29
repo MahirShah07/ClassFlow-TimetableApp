@@ -1,0 +1,126 @@
+.schedule-card {
+  border-radius: 20px;
+  padding: 16px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.schedule-card.completed {
+  opacity: 0.6;
+  background: var(--card-bg);
+}
+
+.schedule-card.current {
+  background: rgba(22, 119, 255, 0.1);
+  border: 1px solid rgba(22, 119, 255, 0.3);
+  box-shadow: 0 4px 20px rgba(22, 119, 255, 0.15);
+}
+
+.schedule-card.upcoming {
+  background: var(--card-bg);
+}
+
+.schedule-card-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.time-col {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  min-width: 60px;
+  font-feature-settings: "tnum";
+  font-variant-numeric: tabular-nums;
+}
+
+.start-time {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.end-time {
+  font-size: 12px;
+  color: var(--text-secondary);
+}
+
+.info-col {
+  flex: 1;
+}
+
+.subject-name {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0 0 4px 0;
+  color: var(--text-primary);
+}
+
+.room-info {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+.status-indicator {
+  width: 24px;
+  display: flex;
+  justify-content: center;
+}
+
+.current-pulse {
+  width: 10px;
+  height: 10px;
+  background-color: var(--primary-color);
+  border-radius: 50%;
+  animation: pulse-blue 2s infinite;
+}
+
+@keyframes pulse-blue {
+  0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(22, 119, 255, 0.7); }
+  70% { transform: scale(1); box-shadow: 0 0 0 10px rgba(22, 119, 255, 0); }
+  100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(22, 119, 255, 0); }
+}
+
+.schedule-card-details {
+  border-top: 1px solid var(--border-color);
+  margin-top: 16px;
+  padding-top: 16px;
+}
+
+.detail-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.detail-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 14px;
+}
+
+.detail-item .anticon {
+  margin-top: 4px;
+  color: var(--primary-color);
+}
+
+.detail-label {
+  display: block;
+  font-size: 11px;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.detail-value {
+  display: block;
+  font-weight: 500;
+  color: var(--text-primary);
+}

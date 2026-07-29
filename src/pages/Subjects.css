@@ -1,0 +1,86 @@
+.subjects-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.subject-card {
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  background: var(--card-bg);
+}
+
+.subject-color-strip {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 6px;
+}
+
+.subject-card-content {
+  padding: 16px 16px 16px 24px;
+}
+
+.subject-title {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0 0 4px 0;
+  color: var(--text-primary);
+}
+
+.subject-faculty {
+  font-size: 14px;
+  color: var(--text-secondary);
+  margin: 0 0 12px 0;
+}
+
+.subject-stats {
+  display: flex;
+  gap: 8px;
+}
+
+.stat-pill {
+  font-size: 12px;
+  background: rgba(0, 0, 0, 0.05);
+  padding: 4px 10px;
+  border-radius: 12px;
+  color: var(--text-secondary);
+}
+
+[data-theme='dark'] .stat-pill {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.subject-expanded-content {
+  padding: 0 16px 16px 24px;
+  border-top: 1px solid var(--border-color);
+}
+
+.mini-schedule-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  font-size: 13px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.mini-schedule-item:last-child {
+  border-bottom: none;
+}
+
+.mini-day {
+  font-weight: 600;
+  width: 40px;
+}
+
+.mini-time {
+  flex: 1;
+  color: var(--text-secondary);
+}
+
+.mini-room {
+  font-weight: 500;
+}
